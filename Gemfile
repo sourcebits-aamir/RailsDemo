@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 
@@ -14,8 +14,14 @@ end
 
 group :development, :test do
   gem "sqlite3-ruby", :require => "sqlite3"
+  #gem 'rspec-rails','2.0.0.beta.18'
+  gem 'rspec-rails','~>2.8'
 end
 
+group :test do
+	gem 'rspec-rails','~>2.8'
+  gem 'capybara', '1.1.2'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
